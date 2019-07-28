@@ -1,0 +1,28 @@
+<header class="mb-4 header-container">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Circuit Review</a>
+      <button class="navbar-toggler" type="button" data-toggler="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-out"></ul>
+        <ul class="navbar-nav">
+            <li class="nav-item"></li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">地域</a>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li class="dropdown-item"><a href="/#chapter1">北海道・東北</a></li>
+                <li class="dropdown-item"><a href="/#chapter2">関東</a></li>
+                <li class="dropdown-item"><a href="/#chapter3">中部</a></li>
+                <li class="dropdown-item"><a href="/#chaoter4">近畿</a></li>
+                <li class="dropdown-item"><a href="/#chapter5">中国・四国</a></li>
+                <li class="dropdown-item"><a href="/#chapter6">九州</a></li>
+              </ul>
+            </li>
+              <li class="navbar-item"><%= link_to "新規登録", signup_path, class: "nav-link" %></li>
+              <li class="navbar-item"><a href="#" class="nav-link">ログイン</a></li>
+        </ul>
+      </div>
+  </nav>
+</header>
