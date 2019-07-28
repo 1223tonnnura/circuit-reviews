@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def show
+    reqire_user_logged_in
     @user = User.find(params[:id])
   end
 
@@ -14,7 +15,7 @@ class UsersController < ApplicationController
       flash[:success] = "ユーザを登録しました"
       redirect_to @user
     else
-      flash[:danger] = "ユーザの登録に失敗しました"
+      flash.now[:danger] = "ユーザの登録に失敗しました"
       render :new
     end
   end
