@@ -3,10 +3,10 @@
 <h1>フリー走行が可能な地域別サーキット一覧</h1>
 
 <div >
-  <ul class="region list-unstyled">
+  <ul class="region">
     <h3 id="chapter1">北海道・東北</h3>
       <% @circuits1.each do |circuit| %>
-        <li><%= circuit.circuit %></li>
+        <li><%= link_to circuit.circuit, circuit_path(circuit) %></li>
       <% end %>
     <h3 id="chapter2">関東</h3>
       <% @circuits2.each do |circuit| %>

@@ -1,12 +1,32 @@
+<div class="circuit-container">
 <h1><%= @circuit.circuit %></h1>
-<img class="col-7" src="<%= @circuit.img %>" alt="<%= @circuit.circuit %>">
-<ul class="col-5">
-  <li><%= @circuit.course %></li>
-  <li><%= @circuit.root %>m</li>
-  <li><%= @circuit.course_type %></li>
-  <li><%= link_to @circuit.circuit, @circuit.site_link %></li>
-</ul>
+<div class="circuit-wrapper">
+  <img class="col-7 circuit-img" src="<%= @circuit.img %>" alt="<%= @circuit.circuit %>">
+  <ul>
+    <b>コース情報</b>
+    <li>コース名：<%= @circuit.course %></li>
+    <li>距離：<%= @circuit.root %>m</li>
+    <li>コースタイプ：<%= @circuit.course_type %></li>
+    <li>公式サイト：<%= link_to @circuit.circuit, @circuit.site_link %></li>
+  </ul>
+</div>
 <h2><%= @circuit.circuit %>の口コミ</h2>
-<div>
-  
+  <div class="col-sm-8 content-container">
+    <%= render 'reviews/reviews', reviews: @reviews %>
+  </div>
+</div>
+  <% if logged_in? %>
+    <div class="row">
+      <aside class="col-sm-4">
+        <%= form_with(model: current_user.reviews.build, local: true) do |f| %>
+          <div>
+            <%= f.text_area :content, class: 'form-control', rows: 5 %>
+            <%= hidden_field_tag :circuit_id, @circuit.id %>
+          </div>
+          <%= f.submit '投稿', class: 'btn btn-primary btn-block' %>
+        <% end %>
+      </aside>
+    </div>
+  </div>
+<% end %>
 </div>

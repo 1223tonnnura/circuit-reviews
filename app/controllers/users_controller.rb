@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def show
-    reqire_user_logged_in
+    require_user_logged_in
     @user = User.find(params[:id])
   end
 
