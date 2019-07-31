@@ -6,7 +6,7 @@ class CircuitsController < ApplicationController
     end
     
     @circuit = Circuit.find(params[:id])
-    @reviews = @circuit.reviews.order(created_at: :desc)
+    @reviews = @circuit.reviews.order(created_at: :desc).page(params[:page]).per(5)
   end
 
 end

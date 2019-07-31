@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   def show
     require_user_logged_in
     @user = User.find(params[:id])
+    @reviews = @user.reviews.order(created_at: :desc).page(params[:page]).per(5)
   end
 
   def new
@@ -24,4 +25,5 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :password, :password_confirmation)
   end
+
 end

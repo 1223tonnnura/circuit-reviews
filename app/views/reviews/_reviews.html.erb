@@ -2,17 +2,18 @@
   <% reviews.each do |review| %>
     <li class="media mb-3">
       <div class="media-body">
-        <div>
-          <span><%= review.user.name %></span>
+        <div class="review-container">
+          <h3><%= review.user.name %></h3>
           <p>reviewed at <%= review.created_at %></p>
-          <p><%= review.content %></p>
+          <p class="coment-container"><%= review.content %></p>
         </div>
         <div>
           <% if current_user == review.user %>
-            <%= link_to "Delete", review, method: :delete, data: { confirm: "You sure?" }, class: "btn btn-danger btn-sm" %>
+            <%= link_to "削除", review, method: :delete, data: { confirm: "You sure?" }, class: "btn btn-danger btn-sm" %>
           <% end %>
         </div>
       </div>
     </li>
   <% end %>
+  <%= paginate @reviews %>
 </ul>

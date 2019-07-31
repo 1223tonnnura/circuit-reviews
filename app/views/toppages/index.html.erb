@@ -1,32 +1,36 @@
-<img class="top-img" src="https://car.i6i6.biz/wp-content/uploads/2018/02/2018-02-26_17h03_32.jpg" alt="トップページ画像">
-
-<h1>フリー走行が可能な地域別サーキット一覧</h1>
-
-<div >
-  <ul class="region">
-    <h3 id="chapter1">北海道・東北</h3>
-      <% @circuits1.each do |circuit| %>
+<div class="toppage-container">
+  <div class="toppage-img">
+    <img src="http://www.wallpaper-box.com/car/images/car60.jpg" alt="トップページの画像">
+    <h1>Circuit Review</h1>
+  </div>
+  
+  <h2 class="pt-3">地域ごとのサーキット一覧</h2>
+  <div>
+    <ul class="region mt-4">
+      <h3 id="chapter1">北海道・東北</h3>
+        <% @circuits1.each do |circuit| %>
+          <li><%= link_to circuit.circuit, circuit_path(circuit) %></li>
+        <% end %>
+      <h3 id="chapter2">関東</h3>
+      <% @circuits2.each do |circuit| %>
         <li><%= link_to circuit.circuit, circuit_path(circuit) %></li>
       <% end %>
-    <h3 id="chapter2">関東</h3>
-      <% @circuits2.each do |circuit| %>
-        <li><%= circuit.circuit %></li>
-      <% end %>
-    <h3 id="chapter3">中部</h3>
+      <h3 id="chapter3">中部</h3>
       <% @circuits3.each do |circuit| %>
-        <li><%= circuit.circuit %></li>
+        <li><%= link_to circuit.circuit, circuit_path(circuit) %></li>
       <% end %>
-    <h3 id="chapter4">近畿</h3>
+      <h3 id="chapter4">近畿</h3>
       <% @circuits4.each do |circuit| %>
-        <li><%= circuit.circuit %></li>
+        <li><%= link_to circuit.circuit, circuit_path(circuit) %></li>
       <% end %>
-    <h3 id="chapter5">中国・四国</h3>
+      <h3 id="chapter5">中国・四国</h3>
       <% @circuits5.each do |circuit| %>
-        <li><%= circuit.circuit %></li>
+        <li><%= link_to circuit.circuit, circuit_path(circuit) %></li>
       <% end %>
-    <h3 id="chapter6">九州</h3>
+      <h3 id="chapter6">九州</h3>
       <% @circuits6.each do |circuit| %>
-        <li><%= circuit.circuit %></li>
+        <li><%= link_to circuit.circuit, circuit_path(circuit) %></li>
       <% end %>
     </ul>
+  </div>
 </div>

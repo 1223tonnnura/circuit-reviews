@@ -1,3 +1,9 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.user-container {
+    text-align: center;
+}
+.user-container p {
+    font-size: 20px;
+}
+.user-container b {
+    font-size: 30px;
+}

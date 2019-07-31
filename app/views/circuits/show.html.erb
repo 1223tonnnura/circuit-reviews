@@ -1,24 +1,25 @@
 <div class="circuit-container">
-<h1><%= @circuit.circuit %></h1>
+<h1 class="p-3"><%= @circuit.circuit %></h1>
 <div class="circuit-wrapper">
-  <img class="col-7 circuit-img" src="<%= @circuit.img %>" alt="<%= @circuit.circuit %>">
-  <ul>
+  <img class="col-7 circuit-img mr-3" src="<%= @circuit.img %>" alt="<%= @circuit.circuit %>">
+  <ul class="list-unstyled">
     <b>コース情報</b>
-    <li>コース名：<%= @circuit.course %></li>
-    <li>距離：<%= @circuit.root %>m</li>
+    <li>場所：<%= @circuit.root %></li>
+    <li>コース：<%= @circuit.course %></li>
     <li>コースタイプ：<%= @circuit.course_type %></li>
     <li>公式サイト：<%= link_to @circuit.circuit, @circuit.site_link %></li>
   </ul>
 </div>
 <h2><%= @circuit.circuit %>の口コミ</h2>
-  <div class="col-sm-8 content-container">
+  <div class="offset-sm-1 col-sm-10 content-container">
     <%= render 'reviews/reviews', reviews: @reviews %>
   </div>
 </div>
   <% if logged_in? %>
     <div class="row">
-      <aside class="col-sm-4">
+      <aside class="offset-sm-3 col-sm-6 pb-5">
         <%= form_with(model: current_user.reviews.build, local: true) do |f| %>
+        <%= render "layouts/error_messages", model: f.object %>
           <div>
             <%= f.text_area :content, class: 'form-control', rows: 5 %>
             <%= hidden_field_tag :circuit_id, @circuit.id %>
