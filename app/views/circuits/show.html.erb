@@ -10,7 +10,7 @@
     <li>公式サイト：<%= link_to @circuit.circuit, @circuit.site_link %></li>
   </ul>
 </div>
-<h2><%= @circuit.circuit %>の口コミ</h2>
+<h2 class="mt-5 pt-5 pb-4"><%= @circuit.circuit %>の口コミ</h2>
   <div class="offset-sm-1 col-sm-10 content-container">
     <%= render 'reviews/reviews', reviews: @reviews %>
   </div>
