@@ -4,9 +4,9 @@
     <h1>Circuit Reviews</h1>
   </div>
   
-  <h2 class="pt-3">地域ごとのサーキット一覧</h2>
-  <div>
-    <ul class="region mt-4">
+  <h2 class="mt-2 p-2">地域ごとのサーキット一覧</h2>
+  <div class="region-container">
+    <ul class="region m-0 pt-4">
       <h3 id="chapter1">北海道・東北</h3>
         <% @circuits1.each do |circuit| %>
           <li><%= link_to circuit.circuit, circuit_path(circuit) %></li>
