@@ -51,4 +51,4 @@ production:
   <<: *default
   database: circuit-reviews_production
   username: circuit-reviews
-  password: <%= ENV['CIRCUIT-REVIEWS_DATABASE_PASSWORD'] %>
+  password: 8wa2p1i5
