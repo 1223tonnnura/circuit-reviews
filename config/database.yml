@@ -48,11 +48,7 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  adapter: mysql2
-  encoding: utf8
-  pool: 5
+  <<: *default
   database: circuit-reviews_production
   username: circuit-reviews
   password: <%= ENV['CIRCUIT-REVIEWS_DATABASE_PASSWORD'] %>
-  reconnect: false
-  host: root
