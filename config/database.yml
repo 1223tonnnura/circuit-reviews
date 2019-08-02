@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: circuit-reviews_production
-  username: circuit-reviews
-  password: 8wa2p1i5
+  database: heroku_58e7b2826628e7e
+  username: b9a1b6613c1c60
+  password: <%= ENV["CIRCUIT-REVIEWS_PASSWORD"] %>
