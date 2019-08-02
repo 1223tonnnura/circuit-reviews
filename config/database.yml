@@ -52,5 +52,7 @@ production:
   encoding: utf8
   pool: 5
   database: circuit-reviews_production
-  username: circuit-reviews
-  password: <%= ENV['CIRCUIT-REVIEWS_DATABASE_PASSWORD'] %>
+  username: bffaf6b346c418
+  password: cb2b4c24
+  reconnect: false
+  host: us-cdbr-iron-east-02.cleardb.net
