@@ -55,3 +55,4 @@ production:
   username: circuit-reviews
   password: <%= ENV['CIRCUIT-REVIEWS_DATABASE_PASSWORD'] %>
   reconnect: false
+  host: root
