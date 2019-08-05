@@ -1,5 +1,5 @@
 .circuit-wrapper {
-    width: 85%;
+    width: 95%;
     height: 300px;
     display: flex;
     margin-bottom: 10px;
@@ -7,8 +7,11 @@
 .circuit-wrapper b{
     font-size: 25px;
 }
+.circuit-list ul {
+    width: 100%;
+}
 .circuit-wrapper li {
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 8px;
 }
 .circuit-container h2 {
