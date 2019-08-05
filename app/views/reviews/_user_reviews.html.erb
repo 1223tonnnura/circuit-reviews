@@ -3,8 +3,7 @@
     <li class="media mb-3">
       <div class="media-body">
         <div class="review-container">
-          <h5><%= link_to review.circuit.circuit, review.circuit %></h5>
-          <h4 class="m-0"><%= review.user.name %></h4>
+          <h4 class="m-0"><%= link_to review.circuit.circuit, review.circuit %></h4>
           <p class="reviews-created"><%= review.created_at %></p>
           <h5 class="p-2" class="coment-container"><%= review.content %></h5>
         </div>
