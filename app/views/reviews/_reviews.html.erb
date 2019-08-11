@@ -5,11 +5,11 @@
         <div class="review-container">
           <h4 class="m-0"><%= review.user.name %></h4>
           <p class="reviews-created"><%= review.created_at %></p>
-          <h5 class="p-2" class="coment-container"><%= review.content %></h5>
+          <h5 class="p-2 coment-container"><%= review.content %></h5>
         </div>
-        <div>
+        <div class="pl-2">
           <% if current_user == review.user %>
-            <%= link_to "削除", review, method: :delete, data: { confirm: "You sure?" }, class: "btn btn-danger btn-sm" %>
+            <%= link_to "削除", review, method: :delete, class: "btn btn-danger btn-sm" %>
           <% end %>
         </div>
       </div>

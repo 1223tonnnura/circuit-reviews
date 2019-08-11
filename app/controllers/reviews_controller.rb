@@ -14,9 +14,6 @@ class ReviewsController < ApplicationController
     end
   end
 
-  def edit
-  end
-
   def destroy
     @review.destroy
     flash[:success] = "メッセージを削除しました"

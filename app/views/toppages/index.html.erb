@@ -3,34 +3,45 @@
     <img src="http://www.wallpaper-box.com/car/images/car60.jpg" alt="トップページの画像">
     <h1>Circuit Reviews</h1>
   </div>
-  
-  <h2 class="mt-2 p-2">地域ごとのサーキット一覧</h2>
   <div class="region-container">
-    <ul class="region m-0 pt-4">
-      <h3 id="chapter1">北海道・東北</h3>
+    <h2 class="p-3 mt-5">地域別サーキット一覧</h2>
+    <ul class="region m-0">
+      <div class="circuit-list">
+        <h3 id="chapter1">北海道・東北</h3>
         <% @circuits1.each do |circuit| %>
           <li><%= link_to circuit.circuit, circuit_path(circuit) %></li>
         <% end %>
-      <h3 id="chapter2">関東</h3>
-      <% @circuits2.each do |circuit| %>
-        <li><%= link_to circuit.circuit, circuit_path(circuit) %></li>
-      <% end %>
-      <h3 id="chapter3">中部</h3>
-      <% @circuits3.each do |circuit| %>
-        <li><%= link_to circuit.circuit, circuit_path(circuit) %></li>
-      <% end %>
-      <h3 id="chapter4">近畿</h3>
-      <% @circuits4.each do |circuit| %>
-        <li><%= link_to circuit.circuit, circuit_path(circuit) %></li>
-      <% end %>
-      <h3 id="chapter5">中国・四国</h3>
-      <% @circuits5.each do |circuit| %>
-        <li><%= link_to circuit.circuit, circuit_path(circuit) %></li>
-      <% end %>
-      <h3 id="chapter6">九州</h3>
-      <% @circuits6.each do |circuit| %>
-        <li><%= link_to circuit.circuit, circuit_path(circuit) %></li>
-      <% end %>
+      </div>
+      <div class="circuit-list">  
+        <h3 id="chapter2">関東</h3>
+        <% @circuits2.each do |circuit| %>
+          <li><%= link_to circuit.circuit, circuit_path(circuit) %></li>
+        <% end %>
+      </div>
+      <div class="circuit-list">
+        <h3 id="chapter3">中部</h3>
+        <% @circuits3.each do |circuit| %>
+          <li><%= link_to circuit.circuit, circuit_path(circuit) %></li>
+        <% end %>
+      </div>
+      <div class="circuit-list">
+        <h3 id="chapter4">近畿</h3>
+        <% @circuits4.each do |circuit| %>
+          <li><%= link_to circuit.circuit, circuit_path(circuit) %></li>
+        <% end %>
+      </div>
+      <div class="circuit-list">
+        <h3 id="chapter5">中国・四国</h3>
+        <% @circuits5.each do |circuit| %>
+          <li><%= link_to circuit.circuit, circuit_path(circuit) %></li>
+        <% end %>
+      </div>
+      <div class="circuit-list">
+        <h3 id="chapter6">九州</h3>
+        <% @circuits6.each do |circuit| %>
+          <li><%= link_to circuit.circuit, circuit_path(circuit) %></li>
+        <% end %>
+      </div>
     </ul>
   </div>
 </div>
