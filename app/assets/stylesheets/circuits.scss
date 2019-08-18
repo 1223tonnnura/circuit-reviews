@@ -4,11 +4,16 @@
     display: flex;
     margin-bottom: 10px;
 }
+.circuit-container h1 {
+    
+}
 .circuit-wrapper b{
     font-size: 25px;
 }
 .circuit-list ul {
     width: 100%;
+    background-image: url(https://ferret.akamaized.net/images/59e76165fafbd876ce00035c/original.jpg?1508335973);
+    border: 1px solid;
 }
 .circuit-wrapper li {
     font-size: 20px;
